@@ -29,3 +29,13 @@ function verCapa(obj, sn){
    obj.style.display = mostrar;
    obj.style.visibility= estado; 
 }
+
+// función rollover para el menú navegador de todas las páginas
+
+// efecto rollover
+
+function cambProp(obj, prop, valor){
+   let span
+   (span=document.getElementById(obj))
+   span.style[prop]= valor;
+}
