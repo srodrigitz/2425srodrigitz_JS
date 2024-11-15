@@ -180,5 +180,10 @@ button {
 #ventana{position:relative; width:500px; height:200px; padding: 10px; margin-bottom:10px; overflow:hidden;}
 #ventana div{position:absolute;}
 
+.cuadroFecha {
+	width: 200px; 
+	font-size: 12px; 
+	background-color: yellow;
+}
 
 /*  fin pruebas funciones*/
