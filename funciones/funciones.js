@@ -38,3 +38,16 @@ function cambProp(obj, prop, valor){
    (span=document.getElementById(obj))
    span.style[prop]= valor;
 }
+
+// fecha última actualización
+
+function ultActual()
+{ 
+  let cfecha = document.lastModified; 
+  let meses = new Array("Enero", "Febrero","Marzo","Abril", "Mayo","Junio", "Julio",   "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"); 
+  let fecha = new Date(Date.parse(cfecha)); 
+  let dia = fecha.getDate(); 
+  let mes = meses[fecha.getMonth()]; 
+  let agno = fecha.getFullYear(); 
+  return (dia +" de "+mes +" de "+agno); 
+} 
