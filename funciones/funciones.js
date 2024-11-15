@@ -2,3 +2,30 @@ function mensaje() {
     alert("Aquí encontrarás toda la información necesaria. Gracias por visitarnos.");
     }
 
+var timer=null;
+   function vertical(capa, incr, vel){
+      let txt = document.getElementById(capa);
+      let limVer, repetir;
+      let posAct = txt.offsetTop+incr ; 
+      clearTimeout(timer);
+      txt.style.top = posAct+"px";
+      //arriba: incr < 0
+      if(incr<0){
+         repetir = posAct > -txt.offsetHeight;
+      }
+      else{
+         repetir = posAct < txt.parentElement.offsetHeight;
+      }
+   if (!repetir){
+      let reini = incr>0?-txt.offsetHeight:txt.parentElement.offsetHeight
+      txt.style.top = reini+"px";
+      }
+      timer=setTimeout(vertical, vel, capa, incr, vel);
+}
+//Muestra u oculta una capa
+function verCapa(obj, sn){
+   let mostrar = (sn)?'block':'none';
+   let estado = (sn)?'visible':'hidden';
+   obj.style.display = mostrar;
+   obj.style.visibility= estado; 
+}
